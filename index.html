@@ -27,11 +27,38 @@
         </div>
       </ul>
     </header>
+
+<!-- start background blur-->
+
+    <div class="gradient-bg">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+      <div class="gradients-container">
+        <div class="g1"></div>
+        <div class="g2"></div>
+        <div class="g3"></div>
+        <div class="g4"></div>
+        <div class="g5"></div>
+        <div class="interactive"></div>
+      </div>
+    </div>
+    <script type="module" src="./scripts/main.ts"></script>
+<!-- end background blur-->
+
+      
     <main>
       <div class="welkomWrapper">
-        <h1>Stroom zonder gedoe.</h1>
-        <img src="./images/ringFront.png" class="cirkel3dFront"/>
-        <img src="./images/ringBack.png" class="cirkel3dBack"/>
+        <div class="welkomTekst">
+        <h1>Stroom <br>zonder gedoe.</h1>
+        <img src="./images/ring2.png" class="cirkel3dFront" />
+        <img src="./images/ring2.png" class="cirkel3dBack" />
         <p>
           Onze diensten omvatten onder anderen het installeren van
           zekeringkasten en het opstellen van gedetailleerde elektrische plannen
@@ -40,14 +67,18 @@
           uw huidige elektrische systeem wilt upgraden of onderhoud nodig heeft,
           ons deskundige team staat klaar om u te helpen.
         </p>
+      </div>
+        <div class="btnWrapper">
         <a href="#" class="btnDark">Neem een afspraak</a>
         <a href="#" class="btnDark">Contacteer ons</a>
       </div>
+      </div>
       <div class="heroWrapper">
-        <h1>
+        <div class="heroTekst">
+        <h2>
           Bij <span class="blue">YouElectric</span> streven we om uw elektrische
           installaties veilig en betrouwbaar te maken.
-        </h1>
+        </h2>
         <p>
           Onze diensten omvatten het installeren van zekeringkasten en het
           opstellen van gedetailleerde elektrische plannen om ervoor te zorgen
@@ -59,25 +90,28 @@
           verbeteren of onderhoud nodig heeft, ons deskundige team staat klaar
           om u te helpen.
         </p>
+        </div>
+        <div class="heroImg"></div>
       </div>
       <div class="heroWrapper">
+        <div class="heroTekst">
         <h2>contacteer ons</h2>
         <p>
           Of u nu een grootschalige renovatie plant, een nieuw bouwproject start
           of een complexe elektrische infrastructuur nodig heeft, ons ervaren
           team staat voor u klaar. Met onze expertise en toewijding zorgen we
           ervoor dat uw project vakkundig wordt uitgevoerd, volgens de hoogste
-          normen van kwaliteit en veiligheid.
+          no  rmen van kwaliteit en veiligheid.
 
           <br />
           <br />
           Neem vandaag nog contact met ons op om uw project te bespreken en te
           ontdekken hoe we u kunnen helpen uw doelen te bereiken.
         </p>
-
+      </div>
         <div class="imgBtnWrapper">
-          <img src="./images/logo.png" alt="" />
-          <a href="#" class="btnDark">Contacteer ons</a>
+          <div class="heroImg"></div>
+          <a href="#" class="btnDark" id="contacteerOns">Contacteer ons</a>
         </div>
       </div>
 
@@ -104,7 +138,7 @@
         >
       </div>
       <div class="imgBtnWrapper">
-        <h1>Contact</h1>
+        <h2>Contact</h2>
         <p>Louisalaan 48, 100 Brussel Info@youelectric.be +32 451 84 64 79</p>
       </div>
     </footer>
