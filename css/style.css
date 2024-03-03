@@ -3,200 +3,21 @@
 :root {
   --bgcolor: #050a30;
   --txtColor: #fff;
-  --secondaryColor: #5CB6F9;
+  --secondaryColor: #5cb6f9;
 
-  --color-bg1: #050A30;
+  --color-bg1: #050a30;
   --color-bg2: rgb(0, 17, 82);
-  --color1: 63, 55, 201;
-  --color2: 67, 97, 238;
-  --color3: 72, 149, 239;
-  --color4: 76, 201, 240;
-  --color5: 114, 9, 183;
+  --color1: 0, 18, 51;
+  --color2: 0, 24, 69;
+  --color3: 0, 40, 85;
+  --color4: 51, 65, 92;
+  --color5: 2, 62, 125;
   --color-interactive: 140, 100, 255;
   --circle-size: 80%;
   --blending: hard-light;
 }
 
 /**start background blur balls */
-
-@keyframes moveInCircle {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes moveVertical {
-  0% {
-    transform: translateY(-50%);
-  }
-  50% {
-    transform: translateY(50%);
-  }
-  100% {
-    transform: translateY(-50%);
-  }
-}
-
-@keyframes moveHorizontal {
-  0% {
-    transform: translateX(-50%) translateY(-10%);
-  }
-  50% {
-    transform: translateX(50%) translateY(10%);
-  }
-  100% {
-    transform: translateX(-50%) translateY(-10%);
-  }
-}
-
-.gradient-bg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
-  top: 0;
-  left: 0;
-z-index: -10000;
-  svg {
-    display: none;
-  }
-
-  .gradients-container {
-    filter: url(#goo) blur(40px);
-    width: 100%;
-    height: 100%;
-  }
-
-  .g1 {
-    position: absolute;
-    background: radial-gradient(
-        circle at center,
-        rgba(var(--color1), 0.8) 0,
-        rgba(var(--color1), 0) 50%
-      )
-      no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2);
-    left: calc(50% - var(--circle-size) / 2);
-
-    transform-origin: center center;
-    animation: moveVertical 30s ease infinite;
-
-    opacity: 1;
-  }
-
-  .g2 {
-    position: absolute;
-    background: radial-gradient(
-        circle at center,
-        rgba(var(--color2), 0.8) 0,
-        rgba(var(--color2), 0) 50%
-      )
-      no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2);
-    left: calc(50% - var(--circle-size) / 2);
-
-    transform-origin: calc(50% - 400px);
-    animation: moveInCircle 20s reverse infinite;
-
-    opacity: 1;
-  }
-
-  .g3 {
-    position: absolute;
-    background: radial-gradient(
-        circle at center,
-        rgba(var(--color3), 0.8) 0,
-        rgba(var(--color3), 0) 50%
-      )
-      no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2 + 200px);
-    left: calc(50% - var(--circle-size) / 2 - 500px);
-
-    transform-origin: calc(50% + 400px);
-    animation: moveInCircle 40s linear infinite;
-
-    opacity: 1;
-  }
-
-  .g4 {
-    position: absolute;
-    background: radial-gradient(
-        circle at center,
-        rgba(var(--color4), 0.8) 0,
-        rgba(var(--color4), 0) 50%
-      )
-      no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2);
-    left: calc(50% - var(--circle-size) / 2);
-
-    transform-origin: calc(50% - 200px);
-    animation: moveHorizontal 40s ease infinite;
-
-    opacity: 0.7;
-  }
-
-  .g5 {
-    position: absolute;
-    background: radial-gradient(
-        circle at center,
-        rgba(var(--color5), 0.8) 0,
-        rgba(var(--color5), 0) 50%
-      )
-      no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: calc(var(--circle-size) * 2);
-    height: calc(var(--circle-size) * 2);
-    top: calc(50% - var(--circle-size));
-    left: calc(50% - var(--circle-size));
-
-    transform-origin: calc(50% - 800px) calc(50% + 200px);
-    animation: moveInCircle 20s ease infinite;
-
-    opacity: 1;
-  }
-
-  .interactive {
-    position: absolute;
-    background: radial-gradient(
-        circle at center,
-        rgba(var(--color-interactive), 0.8) 0,
-        rgba(var(--color-interactive), 0) 50%
-      )
-      no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: 100%;
-    height: 100%;
-    top: -50%;
-    left: -50%;
-
-    opacity: 0.7;
-  }
-}
 
 /** end background blur balls */
 body {
@@ -244,10 +65,10 @@ h1 {
 .cirkel3dFront,
 .cirkel3dBack {
   position: absolute;
-  top: 22%;
+  top: 23%;
   left: 14%;
   width: 125px;
-  animation: ringSlide 2s 1;
+  animation: rotate-center 0.6s ease-in-out both;
 }
 .cirkel3dFront {
   z-index: 1000;
@@ -319,66 +140,146 @@ p {
   }
 }
 
-
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: var(--color-bg2);
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #003566;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #002455;
-  }
-
-  h2 {
-    font-size: 50px;
-    width: 80%;
-  }
-
-  .blue {
-    color: var(--secondaryColor) ;
-  }
-
-.heroWrapper {
-    display: flex;
-    flex-direction: row;
-    margin-top: 10%;
+  width: 10px;
 }
 
-  .heroImg {
-    display: flex;
-    align-self: center;
-    width: 450px;
-    height: 450px;
-    background-image: url(../images/dakwerk.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 25px;
-  }
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color-bg2);
+}
 
-  .heroTekst {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
-  .heroTekst p {
-    width: 70%;
-  }
-  .heroTekst h2 {
-    width: 100%;
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #003566;
+}
 
-  #contacteerOns {
-    
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #002455;
+}
+
+h2 {
+  font-size: 50px;
+  width: 80%;
+}
+
+.blue {
+  color: var(--secondaryColor);
+}
+
+.heroWrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10%;
+}
+
+.heroImg {
+  display: flex;
+  align-self: center;
+  width: 450px;
+  height: 450px;
+  background-image: url(../images/dakwerk.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+}
+
+.heroTekst {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.heroTekst p {
+  width: 70%;
+}
+.heroTekst h2 {
+  width: 100%;
+}
+
+#contacteerOns {
+  width: 400px;
+}
+
+.imgBtnWrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/**
+ * ----------------------------------------
+ * animation rotate-center
+ * ----------------------------------------
+ */
+
+@keyframes rotate-center {
+  0% {
+    left: -10%;
   }
+  100% {
+    left: 14%;
+  }
+}
+
+#grotePlannen {
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+#grotePlannen h2,
+#grotePlannen p {
+  text-align: right;
+  margin: 20px 0;
+}
+
+#grotePlannen .heroTekst {
+  align-items: flex-end;
+}
+
+.logoName {
+  text-decoration: none;
+  color: var(--txtColor);
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 15%;
+
+}
+
+.logoName img {
+  width: 10%;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+  width: 100%;
+
+}
+.footerContactWrapper {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+padding-right: 5%;
+margin-bottom: 2%;
+margin-top: 2%;
+margin-left: 5%;
+
+}
+
+footer h2, footer p {
+  margin: 0;
+  width: 100%;
+}

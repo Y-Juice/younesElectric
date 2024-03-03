@@ -28,118 +28,88 @@
       </ul>
     </header>
 
-<!-- start background blur-->
+    <!-- start background blur-->
 
-    <div class="gradient-bg">
-      <svg xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <filter id="goo">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
-            <feBlend in="SourceGraphic" in2="goo" />
-          </filter>
-        </defs>
-      </svg>
-      <div class="gradients-container">
-        <div class="g1"></div>
-        <div class="g2"></div>
-        <div class="g3"></div>
-        <div class="g4"></div>
-        <div class="g5"></div>
-        <div class="interactive"></div>
-      </div>
-    </div>
-    <script type="module" src="./scripts/main.ts"></script>
-<!-- end background blur-->
+    <!-- end background blur-->
 
-      
     <main>
       <div class="welkomWrapper">
         <div class="welkomTekst">
-        <h1>Stroom <br>zonder gedoe.</h1>
-        <img src="./images/ring2.png" class="cirkel3dFront" />
-        <img src="./images/ring2.png" class="cirkel3dBack" />
-        <p>
-          Onze diensten omvatten onder anderen het installeren van
-          zekeringkasten en het opstellen van gedetailleerde elektrische plannen
-          om ervoor te zorgen dat uw elektrische systemen voldoen aan de hoogste
-          normen van veiligheid en prestaties. Of u nu een nieuwe woning bouwt,
-          uw huidige elektrische systeem wilt upgraden of onderhoud nodig heeft,
-          ons deskundige team staat klaar om u te helpen.
-        </p>
-      </div>
+          <h1>Stroom <br />zonder gedoe.</h1>
+          <img src="./images/ring2.png" class="cirkel3dFront" />
+          <img src="./images/ring2.png" class="cirkel3dBack" />
+          <p>
+            Onze diensten omvatten onder anderen het installeren van
+            zekeringkasten en het opstellen van gedetailleerde elektrische
+            plannen om ervoor te zorgen dat uw elektrische systemen voldoen aan
+            de hoogste normen van veiligheid en prestaties. Of u nu een nieuwe
+            woning bouwt, uw huidige elektrische systeem wilt upgraden of
+            onderhoud nodig heeft, ons deskundige team staat klaar om u te
+            helpen.
+          </p>
+        </div>
         <div class="btnWrapper">
-        <a href="#" class="btnDark">Neem een afspraak</a>
-        <a href="#" class="btnDark">Contacteer ons</a>
-      </div>
+          <a href="#" class="btnDark">Neem een afspraak</a>
+          <a href="#" class="btnDark">Contacteer ons</a>
+        </div>
       </div>
       <div class="heroWrapper">
         <div class="heroTekst">
-        <h2>
-          Bij <span class="blue">YouElectric</span> streven we om uw elektrische
-          installaties veilig en betrouwbaar te maken.
-        </h2>
-        <p>
-          Onze diensten omvatten het installeren van zekeringkasten en het
-          opstellen van gedetailleerde elektrische plannen om ervoor te zorgen
-          dat uw elektrische systemen voldoen aan de hoogste normen van
-          veiligheid en prestaties.
-          <br />
-          <br />
-          Of u nu een nieuwe woning bouwt, uw huidige elektrische systeem wilt
-          verbeteren of onderhoud nodig heeft, ons deskundige team staat klaar
-          om u te helpen.
-        </p>
+          <h2>
+            Bij <span class="blue">YouElectric</span> streven we om uw
+            elektrische installaties veilig en betrouwbaar te maken.
+          </h2>
+          <p>
+            Onze diensten omvatten het installeren van zekeringkasten en het
+            opstellen van gedetailleerde elektrische plannen om ervoor te zorgen
+            dat uw elektrische systemen voldoen aan de hoogste normen van
+            veiligheid en prestaties.
+            <br />
+            <br />
+            Of u nu een nieuwe woning bouwt, uw huidige elektrische systeem wilt
+            verbeteren of onderhoud nodig heeft, ons deskundige team staat klaar
+            om u te helpen.
+          </p>
         </div>
         <div class="heroImg"></div>
       </div>
-      <div class="heroWrapper">
+      <div class="heroWrapper" id="grotePlannen">
         <div class="heroTekst">
-        <h2>contacteer ons</h2>
-        <p>
-          Of u nu een grootschalige renovatie plant, een nieuw bouwproject start
-          of een complexe elektrische infrastructuur nodig heeft, ons ervaren
-          team staat voor u klaar. Met onze expertise en toewijding zorgen we
-          ervoor dat uw project vakkundig wordt uitgevoerd, volgens de hoogste
-          no  rmen van kwaliteit en veiligheid.
+          <h2><span class="blue">Grote plannen?</span></h2>
+          <p>
+            Of u nu een grootschalige renovatie plant, een nieuw bouwproject
+            start of een complexe elektrische infrastructuur nodig heeft, ons
+            ervaren team staat voor u klaar. Met onze expertise en toewijding
+            zorgen we ervoor dat uw project vakkundig wordt uitgevoerd, volgens
+            de hoogste normen van kwaliteit en veiligheid.
 
-          <br />
-          <br />
-          Neem vandaag nog contact met ons op om uw project te bespreken en te
-          ontdekken hoe we u kunnen helpen uw doelen te bereiken.
-        </p>
-      </div>
+            <br />
+            <br />
+            Neem vandaag nog contact met ons op om uw project te bespreken en te
+            ontdekken hoe we u kunnen helpen uw doelen te bereiken.
+          </p>
+        </div>
         <div class="imgBtnWrapper">
-          <div class="heroImg"></div>
+          <div
+            class="heroImg"
+            style="background-image: url(./images/constructie.jpg)"
+          ></div>
           <a href="#" class="btnDark" id="contacteerOns">Contacteer ons</a>
         </div>
-      </div>
-
-      <div class="heroWrapper">
-        <h2>Grote plannen?</h2>
-        <p>
-          Of u nu een grootschalige renovatie plant, een nieuw bouwproject start
-          of een complexe elektrische infrastructuur nodig heeft, ons ervaren
-          team staat voor u klaar. Met onze expertise en toewijding zorgen we
-          ervoor dat uw project vakkundig wordt uitgevoerd, volgens de hoogste
-          normen van kwaliteit en veiligheid.
-
-          <br />
-          <br />
-          Neem vandaag nog contact met ons op om uw project te bespreken en te
-          ontdekken hoe we u kunnen helpen uw doelen te bereiken.
-        </p>
       </div>
     </main>
     <footer>
       <div class="imgBtnWrapper">
         <a class="logoName" href="index.html"
-          ><img class="logo" src="./images/logo.png" alt="logo" />YouElectric</a
-        >
+        ><img
+          class="logo"
+          src="./images/logo.png"
+          alt="logo"
+        />YouElectric</a
+      >
       </div>
-      <div class="imgBtnWrapper">
-        <h2>Contact</h2>
-        <p>Louisalaan 48, 100 Brussel Info@youelectric.be +32 451 84 64 79</p>
+      <div class="footerContactWrapper">
+        <p>Info@youelectric.be <br>+32 451 84 64 79</p>
       </div>
     </footer>
   </body>
