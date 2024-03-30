@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 :root {
-  --bgcolor: #050a30;
+  --bgcolor: #001219;
   --txtColor: #fff;
   --secondaryColor: #5cb6f9;
 
   --color-bg1: #050a30;
-  --color-bg2: rgb(0, 17, 82);
+  --color-bg2: #001219;
   --color1: 0, 18, 51;
   --color2: 0, 24, 69;
   --color3: 0, 40, 85;
@@ -60,12 +60,12 @@ ul li a img {
 h1 {
   font-size: 100px;
   margin: 0;
-  margin-top: 5%;
+  margin-top: 0%;
 }
 .cirkel3dFront,
 .cirkel3dBack {
   position: absolute;
-  top: 23%;
+  top: 26%;
   left: 14%;
   width: 125px;
   animation: rotate-center 0.6s ease-in-out both;
@@ -152,12 +152,12 @@ p {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #003566;
+  background: #005f73;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #002455;
+  background: #0a9396;
 }
 
 h2 {
