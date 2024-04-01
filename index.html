@@ -4,22 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AK Building Solutions</title>
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">    <link rel="stylesheet" href="./css/style.css" />
+    <script defer type="module" src="/scripts/script.js"></script>
+
   </head>
   <body>
     <header>
       <ul>
         <li>
           <a class="logoName" href="index.html"
-            ><img
-              class="logo"
-              src="./images/logo.png"
-              alt="logo"
-            /></a
-          >
+            ><img class="logo" src="./images/logo.png" alt="logo"
+          /></a>
         </li>
-        
       </ul>
     </header>
 
@@ -28,30 +24,31 @@
     <!-- end background blur-->
 
     <main>
-      <div class="welkomWrapper">
+      <div class="welkomWrapper hidden">
         <div class="welkomTekst">
-          <h1>Stroom <br />zonder gedoe.</h1>
-          <img src="./images/ring2.png" class="cirkel3dFront" />
-          <img src="./images/ring2.png" class="cirkel3dBack" />
+          <h1 class="animate"><span class="blue">Stroom</span> <br />zonder gedoe.</h1>
+      <!--    <img src="./images/ring2.png" class="cirkel3dFront" />
+          <img src="./images/ring2.png" class="cirkel3dBack" />-->
           <p>
             Onze diensten omvatten onder anderen het installeren van
             zekeringkasten en het opstellen van gedetailleerde elektrische
             plannen om ervoor te zorgen dat uw elektrische systemen voldoen aan
             de hoogste normen van veiligheid en prestaties. Of u nu een nieuwe
             woning bouwt, uw huidige elektrische systeem wilt upgraden of
-            onderhoud nodig heeft, ons deskundige team staat klaar om u te
-            helpen.
+            onderhoud nodig heeft, ons team staat klaar om u te helpen.
           </p>
         </div>
         <div class="btnWrapper">
-          <a href="#" class="btnDark">Neem een afspraak</a>
-          <a href="#" class="btnDark">Contacteer ons</a>
+          <a href="#" class="btnDark">Schema tekenen</a>
+          <a href="#" class="btnDark" id="zekeringkast"
+            >Zekeringkast plaatsen</a
+          >
         </div>
       </div>
-      <div class="heroWrapper">
+      <div class="heroWrapper hidden">
         <div class="heroTekst">
           <h2>
-            Bij <span class="blue">YouElectric</span> streven we om uw
+            Bij <span class="blue">AK Building Solutions</span> streven we om uw
             elektrische installaties veilig en betrouwbaar te maken.
           </h2>
           <p>
@@ -62,21 +59,21 @@
             <br />
             <br />
             Of u nu een nieuwe woning bouwt, uw huidige elektrische systeem wilt
-            verbeteren of onderhoud nodig heeft, ons deskundige team staat klaar
-            om u te helpen.
+            verbeteren of onderhoud nodig heeft, ons team staat klaar om u te
+            helpen.
           </p>
         </div>
-        <div class="heroImg"></div>
+        <div class="heroImg hidden"></div>
       </div>
       <div class="heroWrapper" id="grotePlannen">
         <div class="heroTekst">
-          <h2><span class="blue">Grote plannen?</span></h2>
-          <p>
+          <h2 class="hidden"><span class="blue">Grote plannen?</span></h2>
+          <p class="hidden">
             Of u nu een grootschalige renovatie plant, een nieuw bouwproject
             start of een complexe elektrische infrastructuur nodig heeft, ons
-            ervaren team staat voor u klaar. Met onze expertise en toewijding
-            zorgen we ervoor dat uw project vakkundig wordt uitgevoerd, volgens
-            de hoogste normen van kwaliteit en veiligheid.
+            team staat voor u klaar. Met onze expertise en toewijding zorgen we
+            ervoor dat uw project vakkundig wordt uitgevoerd, volgens de hoogste
+            normen van kwaliteit en veiligheid.
 
             <br />
             <br />
@@ -86,29 +83,24 @@
         </div>
         <div class="imgBtnWrapper">
           <div
-            class="heroImg"
+            class="heroImg hidden"
             style="background-image: url(./images/constructie.jpg)"
           ></div>
-          <a href="#" class="btnDark" id="contacteerOns">Contacteer ons</a>
+          <a href="#" class="btnDark hidden" id="contacteerOns">Contacteer ons</a>
         </div>
       </div>
     </main>
     <footer>
       <div class="footerBtnWrapper">
         <a class="logoName" href="index.html"
-        ><img
-          class="logo"
-          src="./images/logo.png"
-          alt="logo"
-        />YouElectric 
-        </a
-      >
-      <p><span class="big">Contact</span><br>Info@youelectric.be <br>+32 451 84 64 79</p>
-
+          ><img class="logo" src="./images/logo.png" alt="logo" />
+        </a>
+        <p>
+          <span class="big">Contact</span><br />Akbuildingsolution@outlook.com
+          <br />+32 488 70 59 98
+        </p>
       </div>
-      <div class="footerContactWrapper">
-      </div>
-
     </footer>
+
   </body>
 </html>

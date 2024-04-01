@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 :root {
-  --bgcolor: #001219;
+  --bgcolor: #00152f;
   --txtColor: #fff;
-  --secondaryColor: #5cb6f9;
+  --secondaryColor: #00a6fb;
 
   --color-bg1: #050a30;
   --color-bg2: #001219;
@@ -60,12 +60,12 @@ ul li a img {
 h1 {
   font-size: 100px;
   margin: 0;
-  margin-top: 0%;
+  margin-top: 5%;
 }
 .cirkel3dFront,
 .cirkel3dBack {
   position: absolute;
-  top: 26%;
+  top: 29%;
   left: 14%;
   width: 125px;
   animation: rotate-center 0.6s ease-in-out both;
@@ -106,7 +106,7 @@ p {
   margin: 15px;
   align-content: center;
   text-align: center;
-  width: 200px;
+  width: 250px;
   font-size: 20px;
 }
 
@@ -172,7 +172,8 @@ h2 {
 .heroWrapper {
   display: flex;
   flex-direction: row;
-  margin-top: 10%;
+  margin-top: 20%;
+  animation: rotate-center 0.6s ease-in-out both;
 }
 
 .heroImg {
@@ -225,6 +226,16 @@ h2 {
   }
 }
 
+@keyframes scaleAnim {
+	0% {
+		transform: scale(0, .025);
+	}
+	50% {
+		transform: scale(1, .025);
+	}
+}
+
+
 #grotePlannen {
   flex-direction: row-reverse;
   align-items: center;
@@ -246,7 +257,7 @@ h2 {
   font-size: 25px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 
 }
@@ -297,9 +308,26 @@ footer h2, footer p {
 
 }
 
-.blue, .big {
+ .big {
   font-size: 50px;
   font-weight: 700;
+}
+
+#zekeringkast {
+  width: 250px;
+}
+
+.slide-in-blurred-bottom {
+	animation: slide-in-blurred-bottom 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 426px) {
@@ -308,7 +336,12 @@ footer h2, footer p {
     justify-content: center;
   }
   .logoName {
-    align-content: center;
+    align-content: flex-start;
+    margin: 0;
+  }
+  .logoName img {
+    width: 20%;
+    margin: 0;
   }
 
   h1 {
@@ -323,11 +356,82 @@ footer h2, footer p {
 
 .welkomTekst p {
   width: 100%;
+  margin-bottom: 60%;
 }
 .btnWrapper {
-  position: relative;
-  top: 50%;
+  position: absolute;
+  top: 90%;
+  left: auto;
+  right: auto;
   
+}
+
+.heroWrapper {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.heroImg {
+  width: 90%;
+  height: 350px;
+}
+
+.heroTekst h2 {
+  font-size: 35px;
+}
+
+.heroTekst p {
+  width: 100%;
+}
+
+#grotePlannen {
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.imgBtnWrapper {
+  width: 90%;
+
+}
+.imgBtnWrapper .heroImg {
+  width: 100%;
+}
+
+#contacteerOns {
+  width: 80%;
+}
+
+footer {
+justify-content: center;
+align-items: center;
+margin: 0;
+margin-top: 50%;
+}
+.footerBtnWrapper {
+  display: grid;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerBtnWrapper p {
+  text-align: left;
+  margin: 0;
+}
+.big {
+  font-size: 25px;
+}
+.footerBtnWrapper .logoName img {
+  margin: 0;
+}
+
+#grotePlannen p , #grotePlannen h2{
+  text-align: left;
 }
 
 }
