@@ -1,15 +1,14 @@
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-        console.log(entry);
-        if (entry.isIntersecting){
-            entry.target.classList.add('show');
-        }else {
-            entry.target.classList.remove('show');
-        }
-    });
-});
+"use strict";
 
-console.log('werkt');
+const schemaBtn = document.getElementById("schema");
+const zekeringbtn = document.getElementById("zekeringkast");
+const blur = document.getElementById("schemaBlur");
 
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el)=>observer.observe(el));
+
+function showSchema() {
+
+blur.classList.toggle("noShow");
+
+}
+
+schemaBtn.addEventListener("click", showSchema());

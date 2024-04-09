@@ -5,7 +5,7 @@
   --txtColor: #fff;
   --secondaryColor: #00a6fb;
 
-  --color-bg1: #050a30;
+  --color-bg1: #1b4965;
   --color-bg2: #001219;
   --color1: 0, 18, 51;
   --color2: 0, 24, 69;
@@ -328,6 +328,90 @@ footer h2, footer p {
 
 .show {
   opacity: 1;
+}
+
+.emailWrapper {
+  background-color: var(--color-bg1);
+  padding: 50px;
+  border-radius: 25px;
+  width: 50%;
+  display: grid;
+justify-items: center;
+  position: absolute;
+  left: 25%;
+  right: auto;
+  top: 25%;
+  bottom: auto;
+  font-family: "Rubik", sans-serif;
+text-align: center;
+}
+.emailWrapper h2, .emailWrapper p {
+  margin: 0;
+  width: 100%;
+}
+
+.emailWrapper p {
+  justify-self: left;
+ text-align: left;
+ margin-bottom: 5%;
+ width: 50%;
+ margin-left: 15%;
+}
+
+form {
+  display: grid;
+  justify-items: stretch;
+  text-align: left;
+  width: 30%;
+  padding: 0 15%;
+}
+
+
+
+input[type=text]{
+  border: none;
+  margin-bottom: 2%;
+  border-bottom-color: lightgray;
+  border-bottom-width: 3px;
+  border-bottom-style: inset;
+  width: 80%;
+  padding: 5px 25px;
+  border-radius: 5px;
+}
+
+input[type=submit]{
+  margin: 0;
+  padding: 15px 5px;
+  border: none;
+  border-radius: 25px;
+  font-size: 15px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  color: var(--txtColor);
+  background-color: var(--bgcolor);
+width: 100%;
+}
+
+.blur {
+  backdrop-filter: blur(10px);
+  z-index: 10000;
+border-radius: 25px;
+display: grid;
+position:fixed;
+left: 0;
+right: auto;
+top: 0;
+align-items: center;
+justify-content: center;
+bottom: auto;
+height: 100%;
+width: 100%;
+opacity: 1;
+}
+
+.noShow {
+  opacity: 0;
+  display: none;
 }
 
 @media only screen and (max-width: 426px) {

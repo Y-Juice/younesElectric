@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AK Building Solutions</title>
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">    <link rel="stylesheet" href="./css/style.css" />
-    <script defer type="module" src="/scripts/script.js"></script>
-
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header>
@@ -19,15 +18,45 @@
       </ul>
     </header>
 
-    <!-- start background blur-->
+    <!-- start Pop up -->
+    <div class="blur noShow" id="schemaBlur">
+      <div class="emailWrapper">
+        <button onclick="showSchema()"></button>
 
-    <!-- end background blur-->
+        <h2>Schema laten opmaken</h2>
+        <p>
+          Voor het laten tekenen van een schema, neem gerust contact met ons op
+          via telefoon of e-mail.
+        </p>
+        <p>
+          Voor een snelle afhandeling geven we de voorkeur aan telefonisch
+          contact. Bel ons op +32 488 70 59 98 om een afspraak te maken.
+        </p>
+        <form
+          action="mailto:ytazi06@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          Naam:<br />
+          <input type="text" name="name" /><br />
+          E-mail:<br />
+          <input type="text" name="mail" /><br />
+          Comment:<br />
+          <input type="text" name="comment" size="50" /><br /><br />
+          <input type="submit" value="Send" />
+        </form>
+      </div>
+    </div>
+
+    <!-- end Pop up-->
 
     <main>
       <div class="welkomWrapper hidden">
         <div class="welkomTekst">
-          <h1 class="animate"><span class="blue">Stroom</span> <br />zonder gedoe.</h1>
-      <!--    <img src="./images/ring2.png" class="cirkel3dFront" />
+          <h1 class="animate">
+            <span class="blue">Stroom</span> <br />zonder gedoe.
+          </h1>
+          <!--    <img src="./images/ring2.png" class="cirkel3dFront" />
           <img src="./images/ring2.png" class="cirkel3dBack" />-->
           <p>
             Onze diensten omvatten onder anderen het installeren van
@@ -39,7 +68,9 @@
           </p>
         </div>
         <div class="btnWrapper">
-          <a href="#" class="btnDark">Schema tekenen</a>
+          <a href="#" class="btnDark" id="schema" onclick="showSchema()"
+            >Schema tekenen</a
+          >
           <a href="#" class="btnDark" id="zekeringkast"
             >Zekeringkast plaatsen</a
           >
@@ -86,7 +117,9 @@
             class="heroImg hidden"
             style="background-image: url(./images/constructie.jpg)"
           ></div>
-          <a href="#" class="btnDark hidden" id="contacteerOns">Contacteer ons</a>
+          <a href="#" class="btnDark hidden" id="contacteerOns"
+            >Contacteer ons</a
+          >
         </div>
       </div>
     </main>
@@ -101,6 +134,7 @@
         </p>
       </div>
     </footer>
-
+    <script defer type="module" src="/scripts/module.js"></script>
+    <script defer src="/scripts/script.js"></script>
   </body>
 </html>
