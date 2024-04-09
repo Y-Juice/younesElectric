@@ -12,3 +12,4 @@ blur.classList.toggle("noShow");
 }
 
 schemaBtn.addEventListener("click", showSchema());
+blur.addEventListener("click", showSchema());
