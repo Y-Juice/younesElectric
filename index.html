@@ -19,28 +19,41 @@
     </header>
 
     <!-- start Pop up -->
-    <div class="blur noShow" id="schemaBlur">
+    <div class="blur" id="schemaBlur">
       <div class="emailWrapper">
         <button onclick="showSchema()"></button>
 
-        <h2>Schema laten opmaken</h2>
-        <p>
-          Voor het laten tekenen van een schema, neem gerust contact met ons op
-          via telefoon of e-mail.
-        </p>
+        <h2>Neem contact op met ons</h2>
         <p>
           Voor een snelle afhandeling geven we de voorkeur aan telefonisch
           contact. Bel ons op +32 488 70 59 98 om een afspraak te maken.
+          Eventueel kunt u het formulier hieronder zorgvuldig invullen en we
+          zullen met u contact opnemen.
         </p>
-        <form
-          action="mailto:ytazi06@gmail.com"
-          method="post"
-          enctype="text/plain"
-        >
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input
+            type="hidden"
+            name="access_key"
+            value="833eed5b-7a84-435b-a1ab-f4ed7e0c15c5"
+          />
           Naam:<br />
-          <input type="text" name="name" /><br />
+          <input type="text" name="naam" required /><br />
           E-mail:<br />
-          <input type="text" name="mail" /><br />
+          <input type="email" name="email" required /><br />
+
+          <div class="radioWrapper">
+            <input type="radio" id="Schema Tekenen" name="aanvraag" value="Schema Tekenen" required/>
+            <label for="Schema Tekenen">Schema Tekenen</label><br />
+            <input type="radio" id="Zekeringskast plaatsen" name="aanvraag" value="Zekeringskast plaatsen" />
+            <label for="Zekeringskast plaatsen">Zekeringskast plaatsen</label><br />
+            <input
+              type="radio"
+              id="groot Project"
+              name="aanvraag"
+              value="groot Project"
+            />
+            <label for="groot Project">groot Projecten</label>
+          </div>
           Comment:<br />
           <input type="text" name="comment" size="50" /><br /><br />
           <input type="submit" value="Send" />
@@ -51,7 +64,7 @@
     <!-- end Pop up-->
 
     <main>
-      <div class="welkomWrapper ">
+      <div class="welkomWrapper">
         <div class="welkomTekst">
           <h1 class="animate">
             <span class="blue">Stroom</span> <br />zonder gedoe.
@@ -76,7 +89,7 @@
           >
         </div>
       </div>
-      <div class="heroWrapper ">
+      <div class="heroWrapper">
         <div class="heroTekst">
           <h2>
             Bij <span class="blue">AK Building Solutions</span> streven we om uw
@@ -94,7 +107,7 @@
             helpen.
           </p>
         </div>
-        <div class="heroImg "></div>
+        <div class="heroImg"></div>
       </div>
       <div class="heroWrapper" id="grotePlannen">
         <div class="heroTekst">
@@ -114,12 +127,10 @@
         </div>
         <div class="imgBtnWrapper">
           <div
-            class="heroImg "
+            class="heroImg"
             style="background-image: url(./images/constructie.jpg)"
           ></div>
-          <a href="#" class="btnDark " id="contacteerOns"
-            >Contacteer ons</a
-          >
+          <a href="#" class="btnDark" id="contacteerOns">Contacteer ons</a>
         </div>
       </div>
     </main>
