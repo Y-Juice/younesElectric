@@ -374,7 +374,7 @@ input[type="email"] {
   border-bottom-color: lightgray;
   border-bottom-width: 3px;
   border-bottom-style: inset;
-  width: 80%;
+  width: 90%;
   padding: 5px 25px;
   border-radius: 5px;
 }
@@ -578,4 +578,10 @@ button {
     font-family: "Rubik", sans-serif;
     text-align: center;
   }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 85%;
+  }
+
 }

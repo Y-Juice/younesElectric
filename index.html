@@ -19,7 +19,7 @@
     </header>
 
     <!-- start Pop up -->
-    <div class="blur" id="schemaBlur">
+    <div class="blur noShow" id="schemaBlur">
       <div class="emailWrapper">
         <button onclick="showSchema()"></button>
 
@@ -84,7 +84,7 @@
           <a href="#" class="btnDark" id="schema" onclick="showSchema()"
             >Schema tekenen</a
           >
-          <a href="#" class="btnDark" id="zekeringkast"
+          <a href="#" class="btnDark" id="zekeringkast" onclick="showSchema()"
             >Zekeringkast plaatsen</a
           >
         </div>
@@ -130,7 +130,7 @@
             class="heroImg"
             style="background-image: url(./images/constructie.jpg)"
           ></div>
-          <a href="#" class="btnDark" id="contacteerOns">Contacteer ons</a>
+          <a href="#" class="btnDark" id="contacteerOns" onclick="showSchema()">Contacteer ons</a>
         </div>
       </div>
     </main>
