@@ -367,7 +367,8 @@ form {
   width: 88%;
 }
 
-input[type="text"], input[type="email"] {
+input[type="text"],
+input[type="email"] {
   border: none;
   margin-bottom: 2%;
   border-bottom-color: lightgray;
@@ -552,5 +553,29 @@ button {
     text-align: center;
     width: 250px;
     font-size: 20px;
-}
+  }
+
+  form {
+    width: 100%;
+  }
+  .emailWrapper h2 {
+    font-size: 26px;
+  }
+
+  .emailWrapper p {
+    font-size: 15px;
+  }
+  .emailWrapper {
+    background-color: var(--color-bg1);
+    padding: 25px;
+    border-radius: 25px;
+    width: 80%;
+    justify-items: center;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    font-family: "Rubik", sans-serif;
+    text-align: center;
+  }
 }
