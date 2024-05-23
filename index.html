@@ -11,67 +11,108 @@
     <header>
       <ul>
         <li>
-          <a class="logoName" href="index.html"
-            ><img class="logo" src="./images/logo.png" alt="logo"
-          /></a>
+          <a class="logoName" href="index.html">
+            <img class="logo" src="./images/logo.png" alt="logo" />
+          </a>
         </li>
+        <li>
+          <button id="toggle-lang">NL</button>
+        </li>
+      <!--  <li>
+          <button id="toggle-mode">Dark Mode</button>
+        </li> -->
       </ul>
     </header>
 
     <!-- start Pop up -->
     <div class="blur noShow" id="schemaBlur">
       <div class="emailWrapper">
-        <button onclick="showSchema()"></button>
-
-        <h2>Neem contact op met ons</h2>
-        <p>
-          Voor een snelle afhandeling geven we de voorkeur aan telefonisch
-          contact. Bel ons op +32 488 70 59 98 om een afspraak te maken.
-          Eventueel kunt u het formulier hieronder zorgvuldig invullen en we
-          zullen met u contact opnemen.
-        </p>
+        <button class="button" onclick="showSchema()"></button>
+        <h2 data-nl="Neem contact op met ons" data-fr="Contactez-nous"></h2>
+        <p
+          data-nl="Voor een snelle afhandeling geven we de voorkeur aan telefonisch contact. Bel ons op +32 488 70 59 98 om een afspraak te maken. Eventueel kunt u het formulier hieronder zorgvuldig invullen en we zullen met u contact opnemen."
+          data-fr="Pour un traitement rapide, nous préférons un contact téléphonique. Appelez-nous au +32 488 70 59 98 pour prendre rendez-vous. Vous pouvez également remplir le formulaire ci-dessous et nous vous contacterons."
+        ></p>
         <form action="https://api.web3forms.com/submit" method="POST">
           <input
             type="hidden"
             name="access_key"
             value="e159970b-8cfd-4811-a370-925803c65eef"
           />
-          Naam:<br />
-          <input type="text" name="naam" required /><br />
-          E-mail:<br />
-          <input type="email" name="email" required /><br />
+          <label for="naam" data-nl="Naam:" data-fr="Nom:">Naam:</label><br />
+          <input type="text" name="naam" id="naam" required /><br />
+          <label for="email" data-nl="E-mail:" data-fr="E-mail:">E-mail:</label
+          ><br />
+          <input type="email" name="email" id="email" required /><br />
 
           <div class="radioWrapper">
-            <input type="radio" id="Schema Tekenen" name="aanvraag" value="Schema Tekenen" required/>
-            <label for="Schema Tekenen">Schema Tekenen</label><br />
-            <input type="radio" id="Zekeringskast plaatsen" name="aanvraag" value="Zekeringskast plaatsen" />
-            <label for="Zekeringskast plaatsen">Zekeringskast plaatsen</label><br />
+            <input
+              type="radio"
+              id="Schema Tekenen"
+              name="aanvraag"
+              value="Schema Tekenen"
+              required
+            />
+            <label
+              for="Schema Tekenen"
+              data-nl="Schema Tekenen"
+              data-fr="Dessiner le schéma"
+              >Schema Tekenen</label
+            ><br />
+            <input
+              type="radio"
+              id="Zekeringskast plaatsen"
+              name="aanvraag"
+              value="Zekeringskast plaatsen"
+            />
+            <label
+              for="Zekeringskast plaatsen"
+              data-nl="Zekeringskast plaatsen"
+              data-fr="Installer le tableau électrique"
+              >Zekeringskast plaatsen</label
+            ><br />
             <input
               type="radio"
               id="groot Project"
               name="aanvraag"
               value="groot Project"
             />
-            <label for="groot Project">groot Projecten</label>
+            <label
+              for="groot Project"
+              data-nl="groot Projecten"
+              data-fr="Grands Projets"
+              >groot Projecten</label
+            >
           </div>
-          Comment:<br />
-          <input type="text" name="comment" size="50" /><br /><br />
+          <label for="comment" data-nl="Comment:" data-fr="Commentaire:"
+            >Comment:</label
+          ><br />
+          <input
+            type="text"
+            name="comment"
+            id="comment"
+            size="50"
+          /><br /><br />
           <input type="submit" value="Send" />
         </form>
       </div>
     </div>
-
-    <!-- end Pop up-->
+    <!-- end Pop up -->
 
     <main>
       <div class="welkomWrapper">
         <div class="welkomTekst">
-          <h1 class="animate">
+          <h1
+            class="animate"
+            data-nl="<span class='blue'>Stroom</span> <br />zonder gedoe."
+            data-fr="<span class='blue'>Électricité</span> <br />sans tracas."
+          >
             <span class="blue">Stroom</span> <br />zonder gedoe.
           </h1>
-          <!--    <img src="./images/ring2.png" class="cirkel3dFront" />
-          <img src="./images/ring2.png" class="cirkel3dBack" />-->
-          <p>
+          <p
+            data-nl="Onze diensten omvatten onder anderen het installeren van zekeringkasten en het opstellen van gedetailleerde elektrische plannen om ervoor te zorgen dat uw elektrische systemen voldoen aan de hoogste normen van veiligheid en prestaties. Of u nu een nieuwe woning bouwt, uw huidige elektrische systeem wilt upgraden of onderhoud nodig heeft, ons team staat klaar om u te helpen."
+            data-fr="Nos services comprennent l'installation de tableaux électriques et l'élaboration de plans électriques détaillés pour garantir que vos systèmes électriques répondent aux normes de sécurité et de performance les plus élevées. Que vous construisiez une nouvelle maison, que vous souhaitiez moderniser votre système électrique actuel ou que vous ayez besoin d'entretien, notre équipe est prête à vous aider."
+          >
             Onze diensten omvatten onder anderen het installeren van
             zekeringkasten en het opstellen van gedetailleerde elektrische
             plannen om ervoor te zorgen dat uw elektrische systemen voldoen aan
@@ -81,27 +122,44 @@
           </p>
         </div>
         <div class="btnWrapper">
-          <a href="#" class="btnDark" id="schema" onclick="showSchema()"
+          <a
+            href="#"
+            class="btnDark"
+            id="schema"
+            onclick="showSchema()"
+            data-nl="Schema tekenen"
+            data-fr="Dessiner le schéma"
             >Schema tekenen</a
           >
-          <a href="#" class="btnDark" id="zekeringkast" onclick="showSchema()"
+          <a
+            href="#"
+            class="btnDark"
+            id="zekeringkast"
+            onclick="showSchema()"
+            data-nl="Zekeringkast plaatsen"
+            data-fr="Installer le tableau électrique"
             >Zekeringkast plaatsen</a
           >
         </div>
       </div>
       <div class="heroWrapper">
         <div class="heroTekst">
-          <h2>
+          <h2
+            data-nl="Bij <span class='blue'>AK Building Solutions</span> streven we om uw elektrische installaties veilig en betrouwbaar te maken."
+            data-fr="Chez <span class='blue'>AK Building Solutions</span>, nous nous efforçons de rendre vos installations électriques sûres et fiables."
+          >
             Bij <span class="blue">AK Building Solutions</span> streven we om uw
             elektrische installaties veilig en betrouwbaar te maken.
           </h2>
-          <p>
+          <p
+            data-nl="Onze diensten omvatten het installeren van zekeringkasten en het opstellen van gedetailleerde elektrische plannen om ervoor te zorgen dat uw elektrische systemen voldoen aan de hoogste normen van veiligheid en prestaties. Of u nu een nieuwe woning bouwt, uw huidige elektrische systeem wilt verbeteren of onderhoud nodig heeft, ons team staat klaar om u te helpen."
+            data-fr="Nos services comprennent l'installation de tableaux électriques et l'élaboration de plans électriques détaillés pour garantir que vos systèmes électriques répondent aux normes de sécurité et de performance les plus élevées. Que vous construisiez une nouvelle maison, que vous souhaitiez améliorer votre système électrique actuel ou que vous ayez besoin d'entretien, notre équipe est prête à vous aider."
+          >
             Onze diensten omvatten het installeren van zekeringkasten en het
             opstellen van gedetailleerde elektrische plannen om ervoor te zorgen
             dat uw elektrische systemen voldoen aan de hoogste normen van
             veiligheid en prestaties.
-            <br />
-            <br />
+            <br /><br />
             Of u nu een nieuwe woning bouwt, uw huidige elektrische systeem wilt
             verbeteren of onderhoud nodig heeft, ons team staat klaar om u te
             helpen.
@@ -111,16 +169,24 @@
       </div>
       <div class="heroWrapper" id="grotePlannen">
         <div class="heroTekst">
-          <h2 class=""><span class="blue">Grote plannen?</span></h2>
-          <p class="">
+          <h2
+            class=""
+            data-nl="<span class='blue'>Grote plannen?</span>"
+            data-fr="<span class='blue'>Grands projets?</span>"
+          >
+            <span class="blue">Grote plannen?</span>
+          </h2>
+          <p
+            class=""
+            data-nl="Of u nu een grootschalige renovatie plant, een nieuw bouwproject start of een complexe elektrische infrastructuur nodig heeft, ons team staat voor u klaar. Met onze expertise en toewijding zorgen we ervoor dat uw project vakkundig wordt uitgevoerd, volgens de hoogste normen van kwaliteit en veiligheid. Neem vandaag nog contact met ons op om uw project te bespreken en te ontdekken hoe we u kunnen helpen uw doelen te bereiken."
+            data-fr="Que vous planifiez une rénovation à grande échelle, que vous lanciez un nouveau projet de construction ou que vous ayez besoin d'une infrastructure électrique complexe, notre équipe est à votre disposition. Grâce à notre expertise et à notre engagement, nous veillons à ce que votre projet soit réalisé de manière professionnelle, selon les normes de qualité et de sécurité les plus élevées. Contactez-nous dès aujourd'hui pour discuter de votre projet et découvrir comment nous pouvons vous aider à atteindre vos objectifs."
+          >
             Of u nu een grootschalige renovatie plant, een nieuw bouwproject
             start of een complexe elektrische infrastructuur nodig heeft, ons
             team staat voor u klaar. Met onze expertise en toewijding zorgen we
             ervoor dat uw project vakkundig wordt uitgevoerd, volgens de hoogste
             normen van kwaliteit en veiligheid.
-
-            <br />
-            <br />
+            <br /><br />
             Neem vandaag nog contact met ons op om uw project te bespreken en te
             ontdekken hoe we u kunnen helpen uw doelen te bereiken.
           </p>
@@ -130,16 +196,27 @@
             class="heroImg"
             style="background-image: url(./images/constructie.jpg)"
           ></div>
-          <a href="#" class="btnDark" id="contacteerOns" onclick="showSchema()">Contacteer ons</a>
+          <a
+            href="#"
+            class="btnDark"
+            id="contacteerOns"
+            onclick="showSchema()"
+            data-nl="Contacteer ons"
+            data-fr="Contactez-nous"
+            >Contacteer ons</a
+          >
         </div>
       </div>
     </main>
     <footer>
       <div class="footerBtnWrapper">
-        <a class="logoName" href="index.html"
-          ><img class="logo" src="./images/logo.png" alt="logo" />
+        <a class="logoName" href="index.html">
+          <img class="logo" src="./images/logo.png" alt="logo" />
         </a>
-        <p>
+        <p
+          data-nl="<span class='big'>Contact</span><br />Akbuildingsolution@outlook.com<br />+32 488 70 59 98"
+          data-fr="<span class='big'>Contact</span><br />Akbuildingsolution@outlook.com<br />+32 488 70 59 98"
+        >
           <span class="big">Contact</span><br />Akbuildingsolution@outlook.com
           <br />+32 488 70 59 98
         </p>
@@ -147,5 +224,7 @@
     </footer>
     <script defer type="module" src="./scripts/module.js"></script>
     <script defer src="./scripts/script.js"></script>
+    <script defer src="./scripts/toggleMode.js"></script>
+    <script defer src="./scripts/translate.js"></script>
   </body>
 </html>
